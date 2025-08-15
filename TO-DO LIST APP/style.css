@@ -1,0 +1,377 @@
+/* ============================= */
+/*         ROOT VARIABLES        */
+/* ============================= */
+:root {
+  /* Dark Theme Colors */
+  --bg-dark: #0a0f1c; /* Background color dark mode */
+  --card-dark: #141a2a; /* Card background dark */
+  --muted-dark: #a4acc4; /* Muted text color dark */
+  --accent1-dark: #00e6ff; /* Accent color 1 dark */
+  --accent2-dark: #ff5f9e; /* Accent color 2 dark */
+  --glass-dark: rgba(255, 255, 255, 0.05); /* Glass effect dark mode */
+
+  /* Light Theme Colors */
+  --bg-light: #eef3fb; /* Background light mode */
+  --card-light: #ffffff; /* Card background light */
+  --muted-light: #444; /* Muted text color light */
+  --accent1-light: #0066ff; /* Accent color 1 light */
+  --accent2-light: #ff477e; /* Accent color 2 light */
+  --glass-light: rgba(255, 255, 255, 0.6); /* Glass effect light mode */
+
+  /* Common colors */
+  --success: #34d399; /* Success green */
+  --danger: #ff6b6b; /* Error red */
+
+  /* UI defaults */
+  --radius: 12px; /* Border radius for rounded corners */
+  --transition: all 0.25s ease; /* Smooth transition for animations */
+}
+
+/* ============================= */
+/*     GLOBAL ELEMENT RESET      */
+/* ============================= */
+* {
+  box-sizing: border-box; /* Include padding & border in element's total width/height */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', ui-sans-serif, system-ui, Segoe UI, Roboto, Arial;
+  transition: var(--transition); /* Smooth theme change */
+}
+
+/* ============================= */
+/*      DARK THEME DEFAULTS      */
+/* ============================= */
+body {
+  background: radial-gradient(circle at top, var(--bg-dark), #050812); /* Dark gradient background */
+  color: #e8f1ff; /* Light text for dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+/* ============================= */
+/*       APP CONTAINER BOX       */
+/* ============================= */
+.app {
+  width: 100%;
+  max-width: 980px;
+  background: var(--glass-dark);
+  border-radius: 18px;
+  padding: 20px 22px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  transition: var(--transition);
+}
+
+/* ============================= */
+/*           HEADER BAR          */
+/* ============================= */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, var(--accent1-dark), var(--accent2-dark));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ============================= */
+/*       HEADER CONTROLS         */
+/* ============================= */
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls input[type=search],
+.controls select {
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--glass-dark);
+  color: inherit;
+  min-width: 160px;
+  transition: var(--transition);
+}
+
+/* Hover effect for controls */
+.controls input[type=search]:hover,
+.controls select:hover {
+  transform: scale(1.03);
+  border-color: var(--accent1-dark);
+  box-shadow: 0 0 8px var(--accent1-dark);
+}
+
+/* ============================= */
+/*        THEME TOGGLE BTN       */
+/* ============================= */
+.icon-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.icon-btn:hover {
+  background: linear-gradient(90deg, var(--accent1-dark), var(--accent2-dark));
+  color: #fff;
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 4px 15px var(--accent1-dark);
+}
+
+/* ============================= */
+/*         ADD PANEL ROW         */
+/* ============================= */
+.add-panel {
+  margin-top: 18px;
+}
+
+.field-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.field-row input[type=text],
+.field-row select,
+.field-row input[type=date] {
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  color: inherit;
+  flex: 1;
+  transition: var(--transition);
+}
+
+/* Hover effect for inputs */
+.field-row input:hover,
+.field-row select:hover,
+.field-row input[type=date]:hover {
+  border-color: var(--accent2-dark);
+  box-shadow: 0 0 8px var(--accent2-dark);
+}
+
+/* Add button styling */
+#addBtn {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: none;
+  background: linear-gradient(90deg, var(--accent1-dark), var(--accent2-dark));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#addBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 15px var(--accent2-dark);
+}
+
+/* Error text */
+.input-error {
+  color: var(--danger);
+  font-size: 0.9rem;
+  margin-top: 8px;
+  min-height: 1.1em;
+}
+
+/* ============================= */
+/*          TASK LIST UI         */
+/* ============================= */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual task card */
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius);
+  background: var(--glass-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.15);
+}
+
+/* Task checkbox */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkbox.checked {
+  background: linear-gradient(90deg, var(--accent1-dark), var(--accent2-dark));
+  border: none;
+  color: #fff;
+}
+
+/* Task text & meta */
+.task-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  font-weight: 600;
+}
+
+.task-meta {
+  font-size: 0.85rem;
+  color: var(--muted-dark);
+  margin-top: 4px;
+}
+
+/* Priority label colors */
+.priority-high {
+  background: rgba(255, 90, 90, 0.15);
+  color: #ff7b7b;
+}
+.priority-medium {
+  background: rgba(255, 206, 80, 0.12);
+  color: #ffd580;
+}
+.priority-low {
+  background: rgba(113, 243, 211, 0.1);
+  color: #7ee7c7;
+}
+
+/* Completed task style */
+.task-title.completed {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Empty task note */
+.empty-note {
+  color: var(--muted-dark);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ============================= */
+/*           LIGHT THEME         */
+/* ============================= */
+body.light {
+  background: linear-gradient(135deg, #f7faff, #dde7f6);
+  color: #0b1220;
+}
+
+body.light .app {
+  background: var(--glass-light);
+  box-shadow: 0 8px 30px rgba(12, 20, 40, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+body.light .app-header h1 {
+  background: linear-gradient(90deg, var(--accent1-light), var(--accent2-light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+body.light .controls input[type=search],
+body.light .controls select {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #0b1220;
+}
+
+body.light .icon-btn {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.light .icon-btn:hover {
+  background: linear-gradient(90deg, var(--accent1-light), var(--accent2-light));
+  color: #fff;
+}
+
+body.light #addBtn {
+  background: linear-gradient(90deg, var(--accent1-light), var(--accent2-light));
+}
+
+body.light .task-card {
+  background: var(--card-light);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light .task-meta {
+  color: var(--muted-light);
+}
+
+body.light .empty-note {
+  color: var(--muted-light);
+}
+
+body.light .bulk-actions button {
+  background: linear-gradient(90deg, var(--accent1-light), var(--accent2-light));
+}
+
+/* ============================= */
+/*     BULK ACTION BUTTONS       */
+/* ============================= */
+.bulk-actions button {
+  background: linear-gradient(90deg, var(--accent1-dark), var(--accent2-dark));
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bulk-actions button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px var(--accent1-dark);
+}
+
+/* ============================= */
+/*         RESPONSIVENESS        */
+/* ============================= */
+@media (max-width: 700px) {
+  .field-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .controls {
+    flex-wrap: wrap;
+  }
+}
