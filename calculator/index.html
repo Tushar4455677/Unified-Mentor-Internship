@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Calculator</title>
+
+    <!-- Google Fonts for futuristic calculator text -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap for toggle switch and responsive styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+       
+<body>
+    <div class="calculator">
+        <!-- Dark/Light Mode Toggle Switch -->
+        <div class="form-check form-switch primary">
+            <input class="form-check-input" type="checkbox" id="themeToggle" onclick="toggleTheme()">
+            <label class="form-check-label text-black" for="themeToggle" id="themeLabel" style="margin-top: 12px;">Dark
+                Mode Off</label>
+        </div>
+
+        <!-- Display Screen -->
+        <div class="display" id="display">0</div>
+
+        <!-- Calculator Buttons -->
+        <div class="buttons">
+            <!-- Row 1 -->
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="inputValue('%')">%</button>
+            <button class="operator" onclick="squareRoot()">√</button>
+            <button class="operator" onclick="inputValue('/')">/</button>
+
+            <!-- Row 2 -->
+            <button onclick="inputValue('7')">7</button>
+            <button onclick="inputValue('8')">8</button>
+            <button onclick="inputValue('9')">9</button>
+            <button class="operator" onclick="inputValue('*')">*</button>
+
+            <!-- Row 3 -->
+            <button onclick="inputValue('4')">4</button>
+            <button onclick="inputValue('5')">5</button>
+            <button onclick="inputValue('6')">6</button>
+            <button class="operator" onclick="inputValue('-')">-</button>
+
+            <!-- Row 4 -->
+            <button onclick="inputValue('1')">1</button>
+            <button onclick="inputValue('2')">2</button>
+            <button onclick="inputValue('3')">3</button>
+            <button class="operator" onclick="inputValue('+')">+</button>
+
+            <!-- Row 5 -->
+            <button onclick="inputValue('0')">0</button>
+            <button onclick="inputValue('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+
+            <!-- Memory Functionality -->
+            <button class="memory" onclick="memoryRecall()">MR</button>
+            <button class="memory" onclick="memoryAdd()">M+</button>
+            <button class="memory" onclick="memorySubtract()">M-</button>
+            <button class="memory" onclick="memoryClear()">MC</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

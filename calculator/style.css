@@ -1,0 +1,256 @@
+/* ============================= */
+/*  Theme Variables Setup      */
+/* ============================= */
+
+/* Default Dark Theme Variables */
+:root {
+    --bg-color: #1e1e1e;
+    /* Background color of calculator */
+    --text-color: #0f0;
+    /* Text color for display and buttons */
+    --btn-color: #2d2d2d;
+    /* Default button background */
+    --btn-hover: #00adb5;
+    /* Hover color on buttons */
+    --operator-color: #393e46;
+    /* Background color for operator buttons */
+    --memory-color: #6c5ce7;
+    /* Background color for memory buttons */
+    --equal-color: #00adb5;
+    /* Background for equal button */
+    --clear-color: #ff5722;
+    /* Background for clear button */
+}
+
+/* Light Theme Override Variables */
+body.light {
+    --bg-color: #f1f1f1;
+    /* Light background for calculator */
+    --text-color: #222;
+    /* Darker text for light theme */
+    --btn-color: #fefefe;
+    /* Light background for buttons */
+    --btn-hover: #007bff;
+    /* Blue hover color */
+    --operator-color: #d3d3d3;
+    /* Light operator background */
+    --memory-color: #6f42c1;
+    /* Purple for memory button */
+    --equal-color: #007bff;
+    /* Blue for equal button */
+    --clear-color: #dc3545;
+    /* Red for clear button */
+    background: linear-gradient(to right, #ffffff, #e6e6e6);
+    /* Light gradient */
+}
+
+/* ============================= */
+/*  Reset and Base Styles      */
+/* ============================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base layout for calculator on page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    padding: 20px;
+    transition: background 0.4s ease;
+}
+
+/* ============================= */
+/*  Calculator Container Style */
+/* ============================= */
+
+.calculator {
+    background: var(--bg-color);
+    /* Dynamic background */
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5);
+    /* Depth shadow */
+    transition: all 0.4s ease;
+    transform: perspective(1000px) rotateX(4deg);
+    /* 3D tilt effect */
+    animation: popUp 0.8s ease-out;
+    /* Entry animation */
+    position: relative;
+    backdrop-filter: blur(12px);
+    /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Soft border */
+}
+
+/* ============================= */
+/*  Animation for Pop-Up       */
+/* ============================= */
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotateX(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg);
+    }
+}
+
+/* ============================= */
+/*  Theme Switch Toggle        */
+/* ============================= */
+
+.form-check.form-switch {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Toggle switch border black */
+.form-check-input {
+    border: 2px solid black;
+    /*  this sets black border */
+}
+
+
+/* ============================= */
+/*  Display Bar Style          */
+/* ============================= */
+
+.display {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    color: var(--text-color);
+    /* Dynamic text color */
+    padding: 20px;
+    font-size: 2rem;
+    text-align: right;
+    overflow-x: auto;
+    /* Scrollable display */
+    white-space: nowrap;
+    text-shadow: 0 0 8px limegreen;
+    /* Glowing text */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    /* Inset shadow */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================= */
+/*  Button Grid Layout         */
+/* ============================= */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ============================= */
+/*  Button Common Styles       */
+/* ============================= */
+
+button {
+    padding: 20px;
+    border: none;
+    border-radius: 14px;
+    background: var(--btn-color);
+    /* Dynamic background */
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: translateZ(0);
+    box-shadow:
+        4px 4px 10px rgba(0, 0, 0, 0.4),
+        -4px -4px 10px rgba(255, 255, 255, 0.1),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.05),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* On Hover - scale and color change */
+button:hover {
+    background: var(--btn-hover);
+    transform: scale(1.05);
+}
+
+/* On Active - press down effect */
+button:active {
+    box-shadow:
+        inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+    transform: scale(0.96);
+}
+
+/* ============================= */
+/*  Special Button Styles       */
+/* ============================= */
+
+/* Equal Button */
+.equal {
+    background: var(--equal-color);
+    color: white;
+    box-shadow:
+        0 0 15px var(--equal-color),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.2),
+        inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Clear Button */
+.clear {
+    background: var(--clear-color);
+    color: white;
+    box-shadow:
+        0 0 15px var(--clear-color),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.2),
+        inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Operator Buttons (+, -, *, /) */
+.operator {
+    background: var(--operator-color);
+    box-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.4),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.08),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Memory Buttons (M+, MR, etc.) */
+.memory {
+    background: var(--memory-color);
+    color: white;
+    box-shadow:
+        0 0 12px var(--memory-color),
+        inset -1px -1px 3px rgba(255, 255, 255, 0.2),
+        inset 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================= */
+/*  Responsive Support         */
+/* ============================= */
+
+@media (max-width: 480px) {
+    button {
+        padding: 16px;
+        font-size: 1rem;
+    }
+
+    .display {
+        font-size: 1.5rem;
+    }
+}
