@@ -5,6 +5,7 @@
 This project is a **basic calculator** built using **HTML**, **CSS**, and **JavaScript**.  
 It can perform basic arithmetic operations such as **addition**, **subtraction**, **multiplication**, and **division**.  
 The aim is to strengthen **front-end development skills** and improve understanding of **web technologies**.
+hosted link  : https://calculator-jet-ten-96.vercel.app/
 
 ---
 
