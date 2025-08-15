@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced To-Do List App — Tushar</title>
+  
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <main class="app">
+    
+    <!-- ===== HEADER ===== -->
+    <header class="app-header">
+      <!-- App Title with icon -->
+      <h1><i class="fa-solid fa-list-check"></i> To-Do List App</h1>
+      
+      <!-- Controls: Search, Filter, Sort, Theme Toggle -->
+      <div class="controls">
+        <!-- Search Box -->
+        <input id="searchInput" type="search" placeholder="Search tasks..." aria-label="Search tasks">
+
+        <!-- Priority Filter -->
+        <select id="filterPriority" aria-label="Filter by priority">
+          <option value="all" style="color: black;">All priorities</option>
+          <option value="high" style="color: black;">High</option>
+          <option value="medium" style="color: black;">Medium</option>
+          <option value="low" style="color: black;">Low</option>
+        </select>
+
+        <!-- Sorting -->
+        <select id="sortBy" aria-label="Sort tasks">
+          <option value="createdDesc" style="color: black;">Newest</option>
+          <option value="createdAsc" style="color: black;">Oldest</option>
+          <option value="dueAsc" style="color: black;">Due soon</option>
+          <option value="priorityDesc" style="color: black;">Priority</option>
+        </select>
+
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="icon-btn" title="Toggle theme">
+          <i class="fa-solid fa-moon" style="color: wheat;"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== ADD TASK PANEL ===== -->
+    <section class="add-panel">
+      <div class="field-row">
+        <!-- Task Input -->
+        <input id="taskInput" type="text" placeholder="Add a new task..." aria-label="New task">
+        
+        <!-- Priority Selector -->
+        <select id="prioritySelect" aria-label="Set priority">
+          <option value="medium" style="color: black;">Medium</option>
+          <option value="high" style="color: black;">High</option>
+          <option value="low" style="color: black;">Low</option>
+        </select>
+        
+        <!-- Due Date -->
+        <input id="dueInput" type="date" aria-label="Due date">
+        
+        <!-- Add Task Button -->
+        <button id="addBtn"><i class="fa-solid fa-plus"></i> Add</button>
+      </div>
+      <!-- Error Message -->
+      <div id="inputError" class="input-error" aria-live="polite"></div>
+    </section>
+
+    <!-- ===== TASK LIST PANEL ===== -->
+    <section class="list-panel">
+      <div class="list-header">
+        <!-- Stats -->
+        <div class="stats" style="margin-top: 20px;">
+          <span id="remainingCount">0</span> tasks left
+        </div>
+
+        <!-- Bulk Actions -->
+        <div class="bulk-actions" style="margin-top: 20px;">
+          <button id="clearCompleted" style="margin-right: 30px;">
+            <i class="fa-solid fa-trash"></i> Clear completed
+          </button>
+          
+          <button id="exportJson" style="margin-right: 30px;">
+            <i class="fa-solid fa-file-export"></i> Export
+          </button>
+          
+          <!-- Hidden file input for import -->
+          <input id="importFile" type="file" accept="application/json" hidden>
+          
+          <button id="importJson">
+            <i class="fa-solid fa-file-import"></i> Import
+          </button>
+        </div>
+      </div>
+
+      <!-- Task List -->
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+
+      <!-- Empty Note -->
+      <div class="empty-note" id="emptyNote">No tasks yet — add your first task</div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="app-footer">
+      Build Your Tasks And List • TO-Do List App
+    </footer>
+  </main>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
