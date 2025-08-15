@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio - Tushar Gupta</title>
+
+  <!-- bootstrap css cdn link  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <!-- custom css file -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- bootstrap icon cdn link  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+
+  <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- jquery cdn link  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- navbar starts -->
+  <nav id="navbar-top" class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d">Portfolio</a>
+      <button class="nav-menu d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-menu-button-fill"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#service">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonial">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Projects</a>
+          </li>
+        </ul>
+      </div>
+      <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button>
+    </div>
+  </nav>
+  <!-- navbar ends here -->
+
+  <!-- home section starts  -->
+  <section class="home pt-5 pb-5" id="home">
+    <div class="row justify-content-evenly align-middle">
+      <!-- here data-aos is used for adding aos animation  -->
+      <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
+        <h2 style="color: #3f396d">
+          Hello! I Am <br /><span class="c-orange">Tushar Gupta</span>
+        </h2>
+        <p class="text-muted" style="text-align: justify;">
+          I'm a Full Stack Web Developer with over 1 year of hands-on experience in designing and developing dynamic,
+          fully responsive websites and robust backend systems. I specialize in creating user-friendly,
+          performance-optimized web applications using modern technologies. My expertise includes frontend development
+          with HTML, CSS, JavaScript, and frameworks like Bootstrap and React, as well as backend development with PHP,
+          MySQL, and Node.js. I'm passionate about building scalable solutions, writing clean code, and continuously
+          learning new tools to deliver high-quality digital experiences.
+        </p>
+        <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+          Hire Me
+        </button>
+        <a href="" class="link ms-4 d-none">See My Work</a>
+      </div>
+      <div class="col-10 col-md-4 d-none d-md-block">
+        <img src="images/tushar1.jpeg" class="img-fluid" alt="" />
+      </div>
+    </div>
+  </section>
+  <!-- home section ends here -->
+
+  <!-- expertise section starts -->
+  <section class="expertise mt-5" id="service">
+    <div class="heading text-center">
+      <small>My Expertise</small>
+      <h3>
+        Offering a Wide Range of <br />
+        Digital Solutions
+      </h3>
+    </div>
+    <div class="row justify-content-evenly mt-5">
+      <!-- Web Design -->
+      <div class="col-10 col-md-4" data-aos="fade-up">
+        <div class="service-card">
+          <div class="img">
+            <img src="images/service-icon1.png" class="w-25 img-fluid img" alt="Web Design Icon" />
+          </div>
+          <div class="content mt-3">
+            <h4>Web Design</h4>
+            <p class="text-muted">
+              I create modern, clean, and user-friendly website designs that reflect your brand and deliver an
+              exceptional user experience.
+            </p>
+            <a href="#" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="col-md-4 col-10" data-aos="fade-up">
+        <div class="service-card">
+          <div class="img">
+            <img src="images/service-icon2.png" class="w-25 img-fluid img" alt="Web Development Icon" />
+          </div>
+          <div class="content mt-3">
+            <h4>Web Development</h4>
+            <p class="text-muted">
+              From static sites to dynamic applications, I build responsive and high-performance websites using the
+              latest technologies.
+            </p>
+            <a href="#" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Debugging -->
+      <div class="col-md-4 col-10" data-aos="fade-up">
+        <div class="service-card">
+          <div class="img">
+            <img src="images/service-icon3.png" class="w-25 img-fluid img" alt="Debugging Icon" />
+          </div>
+          <div class="content mt-3">
+            <h4>Debugging</h4>
+            <p class="text-muted">
+              I help identify and fix bugs quickly, ensuring your website or application runs smoothly and error-free
+              across all devices.
+            </p>
+            <a href="#" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- expertise section ends here -->
+
+  <!-- skill section starts -->
+  <section class="skill mt-5 py-5" id="about">
+    <div class="row justify-content-evenly">
+      <!-- Skill Progress Section -->
+      <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+        <div class="row justify-content-evenly">
+          <div class="col-10 col-md-6">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress html-css">
+                <span class="progress-value html-progress">0%</span>
+              </div>
+              <br />
+              <span class="text">HTML & CSS</span>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 mt-4 mt-md-0">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress javascript">
+                <span class="progress-value javascript-progress">0%</span>
+              </div>
+              <br />
+              <span class="text">JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-evenly mt-4">
+          <div class="col-10 col-md-6">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress php">
+                <span class="progress-value php-progress">0%</span>
+              </div>
+              <br />
+              <span class="text">PHP</span>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 mt-4 mt-md-0">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress reactjs">
+                <span class="progress-value reactjs-progress">0%</span>
+              </div>
+              <br />
+              <span class="text">ReactJS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Description Section -->
+      <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+        <div class="heading mt-5 mt-md-3">
+          <small>My Skills</small>
+          <h3>Crafting Modern & Engaging Web Experiences</h3>
+          <p class="text-muted">
+            With a solid foundation in front-end and back-end technologies, I specialize in building visually appealing
+            and highly functional websites. From creating responsive layouts using HTML, CSS, and JavaScript to
+            developing robust backend logic with PHP and modern frameworks like ReactJS, I bring ideas to life with
+            clean code and creativity.
+          </p>
+          <p class="text-muted">
+            I am passionate about web development and constantly enhancing my skills to stay up-to-date with the latest
+            trends. I focus on writing efficient, maintainable code and delivering smooth user experiences across
+            devices.
+          </p>
+          <!-- Open Resume in New Tab -->
+          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill" onclick="openAndDownload()">
+            View & Download CV
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- skill section end here -->
+
+  <!-- portfolio section starts here -->
+  <section class="portfolio" id="portfolio">
+    <div class="heading text-center pt-5">
+      <small>Creative Work</small>
+      <h3>Check My Portfolio</h3>
+    </div>
+
+    <div id="myBtnContainer" class="text-center mt-4">
+      <!-- here we will create custom attribute using data- for filtering -->
+      <button class="filter-item" data-filter="all">All</button>
+      <button class="filter-item" data-filter="game">Game</button>
+      <button class="filter-item" data-filter="webapp">Web App</button>
+      <button class="filter-item" data-filter="website">Website</button>
+      <button class="filter-item" data-filter="brand">Brand</button>
+    </div>
+    <div class="portfolio-body">
+      <div class="row justify-content-evenly px-4">
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/Screenshot 2025-06-29 190819.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">2048 Website</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript,php</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="#" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/Screenshot 2025-06-29 190744.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Atex mart website</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript,php</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="#" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 webapp all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/Screenshot 2025-06-29 191424.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Bookmyshow app</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">WebApp</span><br />
+              <a href="#" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-evenly mt-4 px-4">
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/piceditor.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">PicEditor App</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">App</span><br />
+              <a href="#" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/tictactoe.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">TicTacToe Game</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Game</span><br />
+              <a href="#" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/lang-translator.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Lang Translator</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Web App</span><br />
+              <a href="#" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- portfolio section ends here -->
+
+  <!-- testimonial section starts  -->
+  <section class="testimonial mt-5 pt-5" id="testimonial">
+    <div class="row justify-content-evenly">
+      <div class="col-md-4 col-10" data-aos="slide-right">
+        <img src="images/tastimonials-img.png" class="img-fluid" alt="Testimonial Illustration" />
+      </div>
+      <div class="col-md-6 col-10 mt-5" data-aos="slide-left">
+        <div class="heading">
+          <small>Testimonials</small>
+          <h3>Happy Clients Feedback</h3>
+          <!-- Bootstrap Carousel -->
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <!-- Testimonial 1 -->
+              <div class="carousel-item active">
+                <div class="row justify-content-evenly">
+                  <div class="col-2 text-center">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                  <div class="col-10">
+                    <p class="text-muted">
+                      Working with him was an absolute pleasure. He delivered our web project on time with great
+                      attention to design and responsiveness. Highly professional and proactive!
+                    </p>
+                    <h4>Dipendra Chaturvedi</h4>
+                    <small class="fs-6 text-muted">Coder Of Accenture</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="carousel-item">
+                <div class="row justify-content-evenly">
+                  <div class="col-2 text-center">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                  <div class="col-10">
+                    <p class="text-muted">
+                      His debugging skills saved us during a critical deployment. He quickly identified the issue and
+                      provided a clean, scalable fix. Would definitely recommend him!
+                    </p>
+                    <h4>Suraj Tiwari</h4>
+                    <small class="fs-6 text-muted">Coder of Codeosity</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="carousel-item">
+                <div class="row justify-content-evenly">
+                  <div class="col-2 text-center">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                  <div class="col-10">
+                    <p class="text-muted">
+                      He has an exceptional eye for front-end detail. Our ReactJS dashboard was not only user-friendly
+                      but also visually stunning thanks to his expertise.
+                    </p>
+                    <h4>Chaitanya Mankar</h4>
+                    <small class="fs-6 text-muted">Coder of Codeosity</small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="nextprev-btn rounded-pill prev-btn" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <i class="bi bi-arrow-left-circle-fill prev"></i>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="nextprev-btn rounded-pill next-btn" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <i class="bi bi-arrow-right-circle-fill next"></i>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial ends here -->
+
+  <!-- blog section starts -->
+  <section class="blog mt-5 pb-5" id="blog">
+    <div class="heading text-center pt-5">
+      <small>Latest News</small>
+      <h3>Blog & Articles & Projects</h3>
+    </div>
+    <div class="row justify-content-evenly px-4 mt-4" data-aos="fade-up">
+      <!-- Atex Mart Project -->
+      <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
+        <div class="card">
+          <img src="images/Screenshot 2025-06-29 190744.png" class="card-img-top rounded-4"
+            alt="Atex Mart E-Commerce" />
+          <div class="card-body px-4">
+            <small>By Tushar Gupta</small><span class="ms-3">Mar 8, 2025</span>
+            <h4 class="card-title">
+              <a href="#">Atex Mart: A Seamless E-Commerce Experience</a>
+            </h4>
+            <p class="text-muted">
+              A fully functional e-commerce platform built with HTML, CSS, JS, and PHP, featuring product filtering,
+              cart, login, and secure checkout system.
+            </p>
+            <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zing Talk Project -->
+      <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 website all">
+        <div class="card">
+          <img src="images/Screenshot 2025-06-29 190819.png" class="card-img-top rounded-4" alt="Zing Talk" />
+          <div class="card-body px-4">
+            <small>By Tushar Gupta</small><span class="ms-3">April 8, 2024</span>
+            <h4 class="card-title">
+              <a href="#">Zing Talk: A Next-Gen Social Media Platform</a>
+            </h4>
+            <p class="text-muted">
+              Zing Talk is a modern social networking site where users can post, like, comment, connect with friends,
+              and manage profiles – built using PHP & Bootstrap.
+            </p>
+            <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book My Show Clone -->
+      <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 webapp all">
+        <div class="card">
+          <img src="images/Screenshot 2025-06-29 191424.png" class="card-img-top rounded-4" alt="Book My Show Clone" />
+          <div class="card-body px-4">
+            <small>By Tushar Gupta</small><span class="ms-3">Mar 8, 2022</span>
+            <h4 class="card-title">
+              <a href="#">Book My Show Clone: Movie Booking Made Easy</a>
+            </h4>
+            <p class="text-muted">
+              A functional clone of BookMyShow with features like movie browsing, seat selection, booking, and filtering
+              by genre/language using Django.
+            </p>
+            <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal3">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Atex Mart -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle-fill"></i>
+          </button>
+          <div class="modal-body px-4">
+            <div class="img">
+              <img src="images/Screenshot 2025-06-29 190744.png" class="img-fluid" alt="">
+            </div>
+            <div class="content mt-3">
+              <small>By Tushar Gupta</small><span class="text-muted ms-2">Mar 8, 2025</span>
+              <h4 class="card-title mt-3">Atex Mart: A Seamless E-Commerce Experience</h4>
+              <p class="text-muted mt-3">
+                Atex Mart is a full-stack e-commerce website offering a smooth shopping experience with features like
+                secure authentication, product sorting, and cart functionality. It’s crafted using HTML, CSS,
+                JavaScript, PHP, and MySQL.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Zing Talk -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle-fill"></i>
+          </button>
+          <div class="modal-body px-4">
+            <div class="img">
+              <img src="images/Screenshot 2025-06-29 190819.png" class="img-fluid" alt="">
+            </div>
+            <div class="content mt-3">
+              <small>By Tushar Gupta</small><span class="text-muted ms-2">April 8, 2025</span>
+              <h4 class="card-title mt-3">Zing Talk: A Next-Gen Social Media Platform</h4>
+              <p class="text-muted mt-3">
+                Zing Talk allows users to interact in real-time, manage profiles, chat, and explore content from
+                friends. Built with PHP and Bootstrap, it demonstrates how modern web technologies enable scalable,
+                responsive communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Book My Show Clone -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal">
+            <i class="bi bi-x-circle-fill"></i>
+          </button>
+          <div class="modal-body px-4">
+            <div class="img">
+              <img src="images/Screenshot 2025-06-29 191424.png" class="img-fluid" alt="">
+            </div>
+            <div class="content mt-3">
+              <small>By Tushar Gupta</small><span class="text-muted ms-2">June 8, 2025</span>
+              <h4 class="card-title mt-3">Book My Show Clone: Movie Booking Made Easy</h4>
+              <p class="text-muted mt-3">
+                A Django-powered platform that replicates BookMyShow’s core functions, enabling users to browse movies,
+                view theaters, select seats, and finalize bookings. It also includes genre/language filters and
+                responsive design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- blog section ends here -->
+
+  <!-- contact section starts -->
+  <section class="contact py-5" id="contact">
+    <div class="heading text-center">
+      <small>Get in Touch</small>
+      <h3>Any Questions? Feel Free to Contact</h3>
+    </div>
+    <div class="row justify-content-evenly mt-5">
+      <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <div class="col-11">
+            <p>56,Samarth Nagari Sonegaon Near
+              shiv Mandir Behind HB Estate
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-telephone-fill"></i>
+          </div>
+          <div class="col-11">
+            <p>+91 7249570906</p>
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-send-fill"></i>
+          </div>
+          <div class="col-11">
+            <p>tushar.guptaganesh@gmail.com</p>
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-globe-americas"></i>
+          </div>
+          <div class="col-11">
+            <p>Github - Tushar4455677</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+        <form id="contactForm" class="contact-form" onsubmit="return validateForm()">
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Name" />
+            <div class="invalid-feedback" id="nameError"></div>
+          </div>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="E-mail" />
+            <div class="invalid-feedback" id="emailError"></div>
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control" id="mobile" placeholder="Mobile No." />
+            <div class="invalid-feedback" id="mobileError"></div>
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" id="message" placeholder="Message" rows="5"></textarea>
+            <div class="invalid-feedback" id="messageError"></div>
+          </div>
+
+          <div id="successMessage" class="alert alert-success d-none">Form submitted successfully!</div>
+
+          <button type="submit" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- contact section ends here -->
+
+  <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
+  <button type="button" class="btn btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- footer section starts  -->
+  <footer class="text-center text-muted py-4">
+    <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+    <div class="link-group mt-5" data-aos="fade-up">
+      <a href="#home">Home</a>
+      <div class="vr"></div>
+      <a href="#about">About</a>
+      <div class="vr"></div>
+      <a href="#service">Service</a>
+      <div class="vr"></div>
+      <a href="#portfolio">Portfolio</a>
+      <div class="vr"></div>
+      <a href="#blog">Blog</a>
+      <div class="vr"></div>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social-links mt-5" data-aos="fade-up">
+      <button href="" class="rounded-pill dribble">
+        <i class="bi bi-dribbble"></i>
+      </button>
+      <button href="" class="rounded-pill whatsapp">
+        <i class="bi bi-whatsapp"></i>
+      </button>
+      <button href="" class="rounded-pill behance">
+        <i class="bi bi-behance"></i>
+      </button>
+    </div>
+    <hr class="text-muted my-4" />
+
+    <p>Copyright 2022 Portfolio | All Rights Reserved.</p>
+  </footer>
+  <!-- footer section ends here -->
+
+  <!-- bootstrap javascript cdn link  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS library javascript link  -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // initializing AOS library
+    AOS.init({
+      duration: 1000,
+      offset: 50,
+    });
+  </script>
+  <!-- custom js file linking -->
+  <script src="js/script.js"></script>
+  <!-- JavaScript for Validation & Styling -->
+  <!-- JavaScript with Auto-Hide Errors -->
+  <!-- JavaScript Validation with Format Check -->
+  <script>
+    function validateForm() {
+      let isValid = true;
+
+      // Reset all previous errors and styles
+      document.querySelectorAll('.form-control').forEach(input => {
+        input.classList.remove('is-invalid');
+      });
+      document.querySelectorAll('.invalid-feedback').forEach(error => {
+        error.innerText = '';
+      });
+      document.getElementById('successMessage').classList.add('d-none');
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Name Validation: Only alphabets and spaces
+      const namePattern = /^[A-Za-z\s]+$/;
+      if (!name) {
+        showError('name', 'Please enter your name');
+        isValid = false;
+      } else if (!namePattern.test(name)) {
+        showError('name', 'Name should only contain alphabets');
+        isValid = false;
+      }
+
+      // Email Validation
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email) {
+        showError('email', 'Please enter your email');
+        isValid = false;
+      } else if (!email.match(emailPattern)) {
+        showError('email', 'Invalid email format');
+        isValid = false;
+      }
+
+      // Mobile Number Validation
+      const mobilePattern = /^[0-9]{10}$/;
+      if (!mobile) {
+        showError('mobile', 'Please enter your mobile number');
+        isValid = false;
+      } else if (!mobile.match(mobilePattern)) {
+        showError('mobile', 'Mobile number must be 10 digits');
+        isValid = false;
+      }
+
+      // Message Validation: At least 10 characters, must contain letters
+      const messagePattern = /[A-Za-z]{3,}/;
+      if (!message) {
+        showError('message', 'Please enter your message');
+        isValid = false;
+      } else if (message.length < 10 || !messagePattern.test(message)) {
+        showError('message', 'Message should be meaningful (min 10 letters)');
+        isValid = false;
+      }
+
+      // If all valid
+      if (isValid) {
+        document.getElementById('successMessage').classList.remove('d-none');
+        document.getElementById("contactForm").reset();
+      }
+
+      return false;
+    }
+
+    function showError(fieldId, message) {
+      const field = document.getElementById(fieldId);
+      const errorDiv = document.getElementById(fieldId + "Error");
+
+      field.classList.add("is-invalid");
+      errorDiv.innerText = message;
+
+      // Auto-hide after 4 seconds
+      setTimeout(() => {
+        field.classList.remove("is-invalid");
+        errorDiv.innerText = "";
+      }, 4000);
+    }
+  </script>
+
+
+  <script>
+    function openAndDownload() {
+      // Open in new tab
+      window.open('Resume.pdf', '_blank');
+
+      // Trigger download
+      const link = document.createElement('a');
+      link.href = 'Resume.pdf';
+      link.download = 'Resume';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+
+</body>
+
+</html>

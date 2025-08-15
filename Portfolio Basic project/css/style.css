@@ -1,0 +1,522 @@
+/* 
+==================================================================
+GLOBAL STYLES
+==================================================================
+*/
+
+/* Apply Google font "Josefin Sans" to entire site and prevent horizontal scroll */
+html, body {
+    font-family: 'Josefin Sans', sans-serif; /* Font for the whole page */
+    font-weight: 400; /* Default font weight */
+    overflow-x: hidden; /* Prevent unwanted horizontal scrollbars */
+}
+
+/* 
+==================================================================
+NAVIGATION BAR STYLING
+==================================================================
+*/
+
+/* Menu icon styling (mobile menu toggle button) */
+.nav-menu {
+    border: none; /* Remove border */
+    background-color: #fff; /* White background */
+    font-size: 1.5rem; /* Slightly bigger size for visibility */
+    color: #fca61f; /* Orange accent color */
+}
+
+/* Navigation links default style */
+.navbar-nav a {
+    color: black; /* Default text color */
+    position: relative; /* Needed for the underline animation */
+}
+
+/* Hover effect: change link color */
+.navbar-nav a:hover {
+    color: #fca61f; /* Change to orange when hovered */
+}
+
+/* Underline animation setup for navbar links */
+.navbar-nav a:after {    
+    background: transparent; /* Transparent until animation triggers */
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%; /* Start from middle */
+    top: 35px; /* Position just below text */
+    position: absolute;
+    background: #fca61f; /* Orange underline */
+    transition: width 0.3s ease, left 0.3s ease;
+    width: 0; /* Initially invisible */
+}
+
+/* Underline animation on hover */
+.navbar-nav a:hover:after { 
+    width: 100%; /* Expand to full width */
+    left: 0; 
+}
+
+/* Contact button in navbar */
+.c-btn {
+    border: none; 
+    background: #fca61f; /* Orange background */
+    color: #fff; /* White text */
+    font-size: 1.2rem; /* Slightly bigger for visibility */
+}
+
+/* 
+==================================================================
+HOME SECTION
+==================================================================
+*/
+
+.home {
+    background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
+    padding: 30px 0px 10px 0px; /* Top & bottom spacing */
+}
+
+/* Main heading in home section */
+.home h2 {
+    font-size: 3rem;
+    line-height: 4rem; /* Good spacing between lines */
+}
+
+/* Highlighted orange-colored heading text */
+.c-orange {
+    color: #6f34fe; /* Purple instead of orange */
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+/* Paragraph inside home section */
+.home p {
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Hover effect for call-to-action button */
+.h-btn:hover {
+    background: #6f34fe; /* Purple background */
+    color: #fff;
+    transform: translateY(-20px); /* Lift button */
+    transition-duration: 1s;
+}
+
+/* Styled link with animated underline */
+.link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fca61f;
+    position: relative;
+}
+
+/* Invisible underline initially */
+.link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Hidden by scaling */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #6f34fe;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+/* Change text color on hover */
+.link:hover {
+    color: #6f34fe;
+}
+
+/* Animate underline expansion */
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Floating animation for home image */
+.home img {
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+@keyframes floatimg {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(-24px); }
+    100% { transform: translateX(0); }
+}
+
+/* 
+==================================================================
+EXPERTISE SECTION
+==================================================================
+*/
+
+.heading small {
+    color: #6f34fe;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.heading h3 {
+    margin-top: 0.5rem;
+    color: #3f396d;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Card titles in expertise section */
+.expertise h4 {
+    color: #3f396d;
+    font-weight: 700;
+}
+
+/* Links in expertise cards */
+.expertise a {
+    text-decoration: none;
+    color: #fca61f;
+}
+.expertise a:hover {
+    color: #6f34fe;
+}
+
+/* Expertise card layout */
+.expertise .service-card {
+    text-align: center;
+    padding: 15px;
+    border-radius: 0.7rem;
+}
+
+/* 
+==================================================================
+SKILL SECTION
+==================================================================
+*/
+
+.skill {
+    background-color: rgb(234, 234, 249);
+}
+
+/* Individual progress card */
+.progress-card {
+    padding: 12% 10% 10% 15%;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10%;
+}
+
+/* Hover zoom effect on progress card */
+.progress-card:hover {
+    transform: scale(1.1);
+    transition-duration: 0.6s;
+}
+
+/* Circular progress bar container */
+.circular-progress {
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inner white circle for progress bar */
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* Progress text inside circle */
+.progress-value {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Different colors for different skills */
+.html-progress       { color: #fca61f; }
+.javascript-progress { color: #6f34fe; }
+.php-progress        { color: #20c997; }
+.reactjs-progress    { color: #3f396d; }
+
+.text {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.heading p {
+    font-size: 1.3rem;
+}
+
+/* 
+==================================================================
+PORTFOLIO SECTION
+==================================================================
+*/
+
+#myBtnContainer {
+    margin-bottom: 45px;
+}
+
+#myBtnContainer button {
+    border: none;
+    color: black;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;   
+    display: inline-block;
+    margin: 0 25px;
+}
+
+/* Hover color change */
+#myBtnContainer button:hover {
+    color: #fca61f;
+}
+
+/* Remove focus outline */
+#myBtnContainer button:focus {
+    outline: none;
+}
+
+/* Portfolio post card title */
+.post .content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Remove border from portfolio cards */
+.post .card {
+    border: none;
+}
+
+/* 
+==================================================================
+TESTIMONIAL SECTION
+==================================================================
+*/
+
+.testimonial img:hover {
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+.testimonial h4 {
+    color: #3f396d;
+}
+
+.testimonial i {
+    font-size: 2.9rem;
+    color: #fca61f;
+}
+
+/* Buttons for testimonial carousel */
+.testimonial .nextprev-btn {
+    border: none;
+    background-color: #fff;
+}
+
+/* Hover animations for navigation arrows */
+.prev:hover, .prev-btn:hover {
+    color: #6f34fe;
+    transform: translateX(-10px);
+    transition-duration: 1s;
+}
+.next:hover, .next-btn:hover {
+    color: #6f34fe;
+    transform: translateX(10px);
+    transition-duration: 1s;
+}
+
+/* 
+==================================================================
+BLOG SECTION
+==================================================================
+*/
+
+.blog {
+    background-color: #f2f2ff;
+}
+
+.blog .blogpost .card {
+    border: none;
+    border-radius: 5%;
+}
+
+.nav-bg {
+    background-color: #fff;
+}
+
+.blog .blogpost small {
+    color: #6f34fe;
+    font-size: 1.1rem;
+}
+
+.blog .blogpost h4, .blogpost a {
+    color: #3f396d;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.blogpost a:hover {
+    color: #fca61f;
+}
+
+.blog .blogpost .read-more-btn {
+    text-decoration: none;
+    color: #fca61f;
+    font-size: 1.1rem;
+}
+.blog .blogpost .read-more-btn:hover {
+    color: #6f34fe;
+}
+
+/* 
+==================================================================
+MODAL STYLING
+==================================================================
+*/
+
+.btn-c {
+    margin-left: 94%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: -3%;
+}
+
+.btn-c i {
+    color: #fca61f;
+}
+
+.modal-body .content span {
+    font-size: 1rem;
+}
+
+.modal-body .content small {
+    font-size: 1rem;
+    color: #6f34fe;
+}
+
+/* 
+==================================================================
+CONTACT SECTION
+==================================================================
+*/
+
+.contact {
+    background-color: #f3f3f3;
+}
+
+.contact-details i {
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+/* Input field focus effect */
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+
+/* General form input styling */
+.contact-form .form-control {
+    padding: 10px;
+    width: 80%;
+}
+
+/* 
+==================================================================
+FOOTER SECTION
+==================================================================
+*/
+
+footer {
+    background-color: #211e39;
+}
+
+footer .link-group a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+footer .link-group a:hover {
+    color: #fca61f;
+}
+
+/* Social media buttons */
+.social-links button {
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 14px 15px 10px 15px;
+}
+
+/* Dribble icon */
+.social-links .dribble {
+    color: #f33a7e;
+}
+.social-links .dribble:hover {
+    background-color: #f33a7e;
+}
+
+/* WhatsApp icon */
+.social-links .whatsapp {
+    color: #25D366;
+}
+.social-links .whatsapp:hover {
+    background-color: #25D366;
+}
+
+/* Behance icon */
+.social-links .behance {
+    color: #255afc;
+}
+.social-links .behance:hover {
+    background-color: #255afc;
+}
+
+/* Hover animation for social icons */
+.social-links button:hover {
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+
+/* 
+==================================================================
+BACK TO TOP BUTTON
+==================================================================
+*/
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: #fca61f;
+    color: #fff;
+    animation: pulse 3s infinite; /* Pulsating effect */
+}
